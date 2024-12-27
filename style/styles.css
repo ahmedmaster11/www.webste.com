@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* WhatsApp Icon Styles */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; 
+    left: 20px;  
+    z-index: 1050; 
+    width: 80px; 
+    height: 80px;
+}
+
+.whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+.container h2{
+    font-size: 40px;
+    color: #6738ED;
+}
+.container p{
+    font-family: abeezee (ttf), Helvetica, Arial, sans-serif;
+    font-size: px;
+}
+/* image1 */
+.container {    
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.rotating-box, .zoom-box {
+    background-color: #1CA591;
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    margin-bottom: 20px;
+}
+.rotating-box img, .zoom-box img {
+    width: 60%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.rotating-box img {
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.zoom-box:hover img {
+    transform: scale(1.1);
+}
+a button {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #388074;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 30px;  
+}
+
+button:hover {
+    background-color: #7ac9bc;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .rotating-box, .zoom-box {
+        width:100%;  
+        margin-bottom: 20px;
+    }
+}
+
+/* footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    color: #333;
+}
+
+footer h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer ol {
+    padding-left: 20px;
+}
+
+footer hr {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+
+footer .social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .social-links p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social-links img {
+    width: 30px;
+    height: 30px;
+}
